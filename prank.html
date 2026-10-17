@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رسالة خاصة 🎁</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;display:flex;align-items:center;
+justify-content:center;padding:20px;text-align:center;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#17152f,#522258,#a83262);
+color:white
+}
+.card{
+width:100%;max-width:420px;background:#ffffff12;
+border:1px solid #ffffff30;border-radius:25px;
+padding:35px 22px;box-shadow:0 15px 50px #0004;
+backdrop-filter:blur(10px)
+}
+.emoji{font-size:65px}
+h1{font-size:27px}
+p{color:#eee;line-height:1.9}
+button{
+background:#ffd166;color:#29203b;border:0;border-radius:30px;
+padding:15px 28px;font-size:18px;font-weight:bold;
+cursor:pointer;margin-top:15px
+}
+#message{
+display:none;margin-top:25px;padding:22px 12px;
+background:#fff;color:#b42359;border-radius:16px;
+font-size:27px;font-weight:bold;line-height:1.8;
+animation:pop .4s ease
+}
+@keyframes pop{
+from{transform:scale(.5);opacity:0}
+to{transform:scale(1);opacity:1}
+}
+footer{margin-top:25px;font-size:12px;color:#ddd}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="emoji">💌</div>
+<h1>عندك رسالة خاصة!</h1>
+<p>حد بعتلك رسالة مهمة جدًا 😂<br>اضغط تحت عشان تعرف هو مين وإيه الرسالة.</p>
+<button id="open" onclick="showMessage()">🎁 عرض الرسالة</button>
+<div id="message">أنت بتتناك يا حلاوة 😂😂😂</div>
+<footer>رسالة سرية للغاية 🤫</footer>
+</div>
+<script>
+function showMessage(){
+document.getElementById('message').style.display='block';
+document.getElementById('open').style.display='none';
+}
+</script>
+</body>
+</html>
